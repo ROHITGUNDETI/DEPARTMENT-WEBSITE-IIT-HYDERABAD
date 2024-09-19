@@ -1,0 +1,118 @@
+.flip-card {
+  background-color: transparent;
+  width: 400px;
+  height: 400px;
+  perspective: 1000px;
+  padding: 2%;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 #fffdfd;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #230505;
+  color: rgb(255, 255, 255);
+}
+
+.flip-card-back {
+  background-color: #260116;
+  color: white;
+  transform: rotateY(180deg);
+}
+.hh {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: .5rem;
+  position:relative;
+  bottom:-90%
+}
+
+.h1_mod {
+	
+	display: block;
+    font-size: 2em;
+    margin-block-start: 0.2em;
+    /* margin-block-end: 0.67em; */
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.p_mod{
+	/* font-family: Roboto; */
+	padding-left: 2%;
+	padding-right: 2%;
+    display: block;
+	text-align: center;
+    margin-block-start: 1em;
+    /* margin-block-end: 1em; */
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+	line-height: 1.15em;
+}
+.p_mod_2{
+	/* font-family: Roboto; */
+	padding-left: 2%;
+	padding-right: 2%;
+text-transform: capitalize;   
+ display: block;
+	text-align: center;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+	color: #8cf900;
+	line-height: 1.15em;
+}
+.img_mod{
+	
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 600px) {
+
+	.footer-basic-centered{
+		padding: 35px;
+	}
+
+	.footer-basic-centered .footer-company-motto{
+		font-size: 18px;
+	}
+
+	.footer-basic-centered .footer-company-name{
+		font-size: 12px;
+	}
+
+	.footer-basic-centered .footer-links{
+		font-size: 14px;
+		padding: 25px 0 20px;
+	}
+
+	.footer-basic-centered .footer-links a{
+		line-height: 1.8;
+	}
+}

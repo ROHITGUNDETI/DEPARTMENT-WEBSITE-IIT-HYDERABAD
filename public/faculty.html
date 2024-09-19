@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>Faculty</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h2 {
+            font-weight: 600;
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .search-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #facultySearch {
+            width: 50%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            outline: none;
+            transition: 0.3s ease;
+        }
+
+        #facultySearch:focus {
+            border-color: #007bff;
+        }
+
+        .faculty-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .faculty-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .faculty-card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 5px solid #007bff;
+        }
+
+        .faculty-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .faculty-info h3 {
+            font-size: 22px;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .faculty-info p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 0;
+        }
+
+        .faculty-info a {
+            color: #007bff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .faculty-info a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            #facultySearch {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--================ Navbar (unchanged) =================-->
+    <header class="header_area">
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <a class="navbar-brand logo_h" href="index.html"><img src="img/CCLogo.png" style="width: 50%;" alt=""></a>
+                    <span>Department of Climate Change</span>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" style="color:#0400ff" href="faculty-recruitment.html">Faculty recruitment</a></li>
+                            <li class="nav-item submenu dropdown">
+                                <a href="course-structure.html" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">About Us</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="what-we-are-for.html">What we are for</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="climate-change.html">Climate Change</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="administration.html">Administration</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="external-links.html">Contact Us</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="visitors-info.html">Visitors</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item submenu dropdown">
+                                <a href="course-structure.html" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">Academics</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="course-structure.html">Course Structure</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="course.html">Course Details</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="internship.html">Internship</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="Industry_Seminar.html">Industry Seminar</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item submenu dropdown">
+                                <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">People</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="faculty.html">Faculty</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="students.html">Students</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="previous_faculty.html">Previously Associated Faculty</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact_us.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--================ End Navbar =================-->
+
+    <!-- Faculty Search -->
+    <div class="search-container">
+        <input type="text" id="facultySearch" placeholder="Search faculty..." onkeyup="searchFaculty()">
+    </div>
+
+    <!-- Faculty Section -->
+    <div class="container">
+        <h2>Meet Our Faculty</h2>
+        <div class="row" id="faculty-list">
+            <!-- Faculty Card 1 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="faculty-card">
+                    <img src="img/Aalok_Khandekar.jpg" alt="Aalok Khandekar">
+                    <div class="faculty-info">
+                        <h3>Aalok Khandekar</h3>
+                        <p>Assistant Professor</p>
+                        <p><a href="#" data-toggle="modal" data-target="#modalAalok">More Info</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Faculty Card 2 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="faculty-card">
+                    <img src="img/Ambica.png" alt="Ambika S">
+                    <div class="faculty-info">
+                        <h3>Ambika S</h3>
+                        <p>Assistant Professor</p>
+                        <p><a href="#" data-toggle="modal" data-target="#modalAmbika">More Info</a></p>
+                    </div>
+                </div>
+            </div>
+
+     <!-- Faculty Card 3 -->
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="faculty-card">
+        <img src="img/Asif_Qureshi.png" alt="Asif Qureshi">
+        <div class="faculty-info">
+            <h3>Asif Qureshi</h3>
+            <p>Professor</p>
+            <p><a href="#" data-toggle="modal" data-target="#modalAsif">More Info</a></p>
+        </div>
+    </div>
+</div>
+
+<!-- Faculty Card 4 -->
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="faculty-card">
+        <img src="img/Debraj_Bhattacharyya.jpg" alt="Debraj Bhattacharyya">
+        <div class="faculty-info">
+            <h3>Debraj Bhattacharyya</h3>
+            <p>Professor</p>
+            <p><a href="#" data-toggle="modal" data-target="#modalDebraj">More Info</a></p>
+        </div>
+    </div>
+</div>
+
+<!-- Faculty Card 5 -->
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="faculty-card">
+        <img src="img/Deepu.jpg" alt="Deepu J. Babu">
+        <div class="faculty-info">
+            <h3>Deepu J. Babu</h3>
+            <p>Assistant Professor</p>
+            <p><a href="#" data-toggle="modal" data-target="#modalDeepu">More Info</a></p>
+        </div>
+    </div>
+</div>
+
+<!-- Faculty Card 6 -->
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="faculty-card">
+        <img src="img/ganesh-mp.jpg" alt="Ganesh M P">
+        <div class="faculty-info">
+            <h3>Ganesh M P</h3>
+            <p>Associate Professor</p>
+            <p><a href="#" data-toggle="modal" data-target="#modalGanesh">More Info</a></p>
+        </div>
+    </div>
+</div>
+
+<!-- Faculty Card 7 -->
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="faculty-card">
+        <img src="img/haripriya_Narsimhan.jpg" alt="Hari Priya">
+        <div class="faculty-info">
+            <h3>Hari Priya</h3>
+            <p>Associate Professor</p>
+            <p><a href="#" data-toggle="modal" data-target="#modalHari">More Info</a></p>
+        </div>
+    </div>
+</div>
+
+<!-- Faculty Card 8 -->
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="faculty-card">
+        <img src="img/Kaushik_Nayak.jpg" alt="Kaushik Nayak">
+        <div class="faculty-info">
+            <h3>Kaushik Nayak</h3>
+            <p>Assistant Professor</p>
+            <p><a href="#" data-toggle="modal" data-target="#modalKaushik">More Info</a></p>
+        </div>
+    </div>
+</div>
+
+<!-- Faculty Card 9 -->
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="faculty-card">
+        <img src="img/Kishalay_Mitra.jpg" alt="Kishalay Mitra">
+        <div class="faculty-info">
+            <h3>Kishalay Mitra</h3>
+            <p>Associate Professor</p>
+            <p><a href="#" data-toggle="modal" data-target="#modalKishalay">More Info</a></p>
+        </div>
+    </div>
+</div>
+
+<!-- Faculty Card 10 -->
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="faculty-card">
+        <img src="img/maheswaran.png" alt="Maheswaran R">
+        <div class="faculty-info">
+            <h3>Maheswaran R</h3>
+            <p>Assistant Professor</p>
+            <p><a href="#" data-toggle="modal" data-target="#modalMaheswaran">More Info</a></p>
+        </div>
+    </div>
+</div>
+
+<!-- Faculty Card 11 -->
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="faculty-card">
+        <img src="img/nghaisas.png" alt="Niranjan S Ghaisas">
+        <div class="faculty-info">
+            <h3>Niranjan S Ghaisas</h3>
+            <p>Assistant Professor</p>
+            <p><a href="#" data-toggle="modal" data-target="#modalNiranjan">More Info</a></p>
+        </div>
+    </div>
+</div>
+
+<!-- Faculty Card 12 -->
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="faculty-card">
+        <img src="img/Pritha_Chatterjee.png" alt="Pritha Chatterjee">
+        <div class="faculty-info">
+            <h3>Pritha Chatterjee</h3>
+            <p>Assistant Professor</p>
+            <p><a href="#" data-toggle="modal" data-target="#modalPritha">More Info</a></p>
+        </div>
+    </div>
+</div>
+
+<!-- Faculty Card 13 -->
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="faculty-card">
+        <img src="img/Santosh_Kumar_Raavi.jpg" alt="Sai Santosh Kumar Raavi">
+        <div class="faculty-info">
+            <h3>Sai Santosh Kumar Raavi</h3>
+            <p>Associate Professor</p>
+            <p><a href="#" data-toggle="modal" data-target="#modalSantosh">More Info</a></p>
+        </div>
+    </div>
+</div>
+
+<!-- Faculty Card 14 -->
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="faculty-card">
+        <img src="img/Sathya_Peri.jpg" alt="Sathya Peri">
+        <div class="faculty-info">
+            <h3>Sathya Peri</h3>
+            <p>Professor</p>
+            <p><a href="#" data-toggle="modal" data-target="#modalSathya">More Info</a></p>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+
+    <!-- Modals for Detailed Information -->
+    <!-- Modal for Aalok Khandekar -->
+    <div class="modal fade" id="modalAalok" tabindex="-1" role="dialog" aria-labelledby="modalAalokTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalAalokTitle">Aalok Khandekar - Assistant Professor</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    My research focuses on how science, technology, and society shape each other. Recent work includes air pollution governance, climate resilience in smart city contexts, and cooling infrastructures in urban settings.
+                </div>
+                <div class="modal-footer">
+                    <a href="https://www.iith.ac.in/~aalok/" target="_blank" class="btn btn-primary">View Full Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Ambika S -->
+    <div class="modal fade" id="modalAmbika" tabindex="-1" role="dialog" aria-labelledby="modalAmbikaTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalAmbikaTitle">Ambika S - Assistant Professor</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    My research interests include climate change mitigation, nanomaterials in wastewater treatment, resource recovery, and circular economy.
+                </div>
+                <div class="modal-footer">
+                    <a href="https://civil.iith.ac.in/dr-ambika-s/" target="_blank" class="btn btn-primary">View Full Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Modal for Asif Qureshi -->
+<div class="modal fade" id="modalAsif" tabindex="-1" role="dialog" aria-labelledby="modalAsifTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalAsifTitle">Asif Qureshi - Professor</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                My research focuses on assessing the impacts of climate change on environmental and ecosystem health, and human health. Ongoing work includes studies on the biogeochemical cycles and the accumulation of toxins in marine life.
+            </div>
+            <div class="modal-footer">
+                <a href="https://civil.iith.ac.in/people_faculty_asif/" target="_blank" class="btn btn-primary">View Full Profile</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Debraj Bhattacharyya -->
+<div class="modal fade" id="modalDebraj" tabindex="-1" role="dialog" aria-labelledby="modalDebrajTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalDebrajTitle">Debraj Bhattacharyya - Professor</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                I am interested in studying the effects of wastewater treatment technologies and waste management practices on climate change, focusing on sustainability and renewable energy.
+            </div>
+            <div class="modal-footer">
+                <a href="https://civil.iith.ac.in/people_faculty_debrajb/" target="_blank" class="btn btn-primary">View Full Profile</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal for Deepu J. Babu -->
+<div class="modal fade" id="modalDeepu" tabindex="-1" role="dialog" aria-labelledby="modalDeepuTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalDeepuTitle">Deepu J. Babu - Assistant Professor</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                My research focuses on carbon capture, utilizing energy-efficient adsorption and membrane-based routes for capturing CO₂ using nanoporous materials.
+            </div>
+            <div class="modal-footer">
+                <a href="https://www.iith.ac.in/~deepu/" target="_blank" class="btn btn-primary">View Full Profile</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Ganesh M P -->
+<div class="modal fade" id="modalGanesh" tabindex="-1" role="dialog" aria-labelledby="modalGaneshTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalGaneshTitle">Ganesh M P - Associate Professor</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                My research focuses on eco-friendly behaviors in the workplace, frugal living, and green management practices, including the interaction of micro and macro-level factors influencing eco-friendly behavior.
+            </div>
+            <div class="modal-footer">
+                <a href="https://sites.google.com/a/iith.ac.in/dr-m-p-ganesh/home" target="_blank" class="btn btn-primary">View Full Profile</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal for Hari Priya -->
+<div class="modal fade" id="modalHari" tabindex="-1" role="dialog" aria-labelledby="modalHariTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalHariTitle">Hari Priya - Associate Professor</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                I am an anthropologist focusing on media, health, and sustainability, using qualitative approaches to understand how people perceive climate change and urban sustainability.
+            </div>
+            <div class="modal-footer">
+                <a href="https://sites.google.com/a/iith.ac.in/hari-priya/" target="_blank" class="btn btn-primary">View Full Profile</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Kaushik Nayak -->
+<div class="modal fade" id="modalKaushik" tabindex="-1" role="dialog" aria-labelledby="modalKaushikTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalKaushikTitle">Kaushik Nayak - Assistant Professor</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                My research focuses on understanding natural and anthropogenic causes of climate change, Earth system science, and the potential for life on other planets.
+            </div>
+            <div class="modal-footer">
+                <a href="https://www.iith.ac.in/~knayak/" target="_blank" class="btn btn-primary">View Full Profile</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal for Kishalay Mitra -->
+<div class="modal fade" id="modalKishalay" tabindex="-1" role="dialog" aria-labelledby="modalKishalayTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalKishalayTitle">Kishalay Mitra - Associate Professor</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                I specialize in AI/ML techniques for time series data related to climate change, hyperparameter optimization, biofuel supply chain management, and emissions.
+            </div>
+            <div class="modal-footer">
+                <a href="https://sites.google.com/site/kishalaymitra/" target="_blank" class="btn btn-primary">View Full Profile</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal for Maheswaran R -->
+<div class="modal fade" id="modalMaheswaran" tabindex="-1" role="dialog" aria-labelledby="modalMaheswaranTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalMaheswaranTitle">Maheswaran R - Assistant Professor</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                My research interests include the impact of climate change on water resources, groundwater-surface water interactions, and hydrological modeling.
+            </div>
+            <div class="modal-footer">
+                <a href="#" target="_blank" class="btn btn-primary">View Full Profile</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal for Niranjan S Ghaisas -->
+<div class="modal fade" id="modalNiranjan" tabindex="-1" role="dialog" aria-labelledby="modalNiranjanTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalNiranjanTitle">Niranjan S Ghaisas - Assistant Professor</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                My research interests include atmospheric boundary layer turbulence, wind energy, and moisture transport, focusing on wind farms and cloud simulations.
+            </div>
+            <div class="modal-footer">
+                <a href="https://sites.google.com/iith.ac.in/nghaisas/home" target="_blank" class="btn btn-primary">View Full Profile</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal for Pritha Chatterjee -->
+<div class="modal fade" id="modalPritha" tabindex="-1" role="dialog" aria-labelledby="modalPrithaTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalPrithaTitle">Pritha Chatterjee - Assistant Professor</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                My research focuses on sustainable waste management, carbon emissions, waste-to-energy, and resource recovery from waste using bioelectrochemical methods.
+            </div>
+            <div class="modal-footer">
+                <a href="https://civil.iith.ac.in/people_faculty_pritha/" target="_blank" class="btn btn-primary">View Full Profile</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Sai Santosh Kumar Raavi -->
+<div class="modal fade" id="modalSantosh" tabindex="-1" role="dialog" aria-labelledby="modalSantoshTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalSantoshTitle">Sai Santosh Kumar Raavi - Associate Professor</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                My research group employs optical spectroscopy to study emerging solar cells, including photophysics, optical radiometry, and various techniques for climate monitoring.
+            </div>
+            <div class="modal-footer">
+                <a href="https://www.iith.ac.in/~sskraavi/" target="_blank" class="btn btn-primary">View Full Profile</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Sathya Peri -->
+<div class="modal fade" id="modalSathya" tabindex="-1" role="dialog" aria-labelledby="modalSathyaTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalSathyaTitle">Sathya Peri - Professor</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                My research focuses on parallel and distributed systems, with a special interest in scaling up weather prediction models through parallelization.
+            </div>
+            <div class="modal-footer">
+                <a href="https://www.iith.ac.in/~sathya_p/" target="_blank" class="btn btn-primary">View Full Profile</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+        function searchFaculty() {
+            const input = document.getElementById('facultySearch').value.toUpperCase();
+            const cards = document.querySelectorAll('.faculty-card');
+            cards.forEach(card => {
+                const name = card.querySelector('h3').textContent.toUpperCase();
+                card.style.display = name.includes(input) ? 'block' : 'none';
+            });
+        }
+    </script>
+</body>
+ <!-- Footer Section -->
+ <footer style="background-color: #171e27; padding: 20px; color: white;">
+    <div class="container">
+        <div class="row">
+            <!-- Logo and Department Info -->
+            <div class="col-md-6">
+                <img src="img\CCLogo.png" alt="IIT Hyderabad Logo" style="height: 60px; margin-bottom: 10px;">
+                <h5 style="color: white">DEPARTMENT OF CLIMATE CHANGE,</h5>
+                <h5 style="color: white">INDIAN INSTITUTE OF TECHNOLOGY HYDERABAD</h5>
+                <p>
+                    <i class="fas fa-envelope"></i> head [at] cc.iith.ac.in <br>
+                    <i class="fas fa-phone"></i>
+                </p>
+            </div>
+            <!-- Location Info -->
+            <div class="col-md-6">
+                <h5>LOCATION</h5>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i> Academic Block B, IITH, Kandi, Sangareddy - 502285
+                </p>
+            </div>
+        </div>
+        <hr style="border-top: 1px solid rgba(255,255,255,.2);">
+        <div class="row">
+            <div class="col text-center">
+                <p>© 2024 Copyright: Webteam, Department of Climate Change, IIT Hyderabad</p>
+            </div>
+        </div>
+    </div>
+ </footer>
+ 
+ <!-- Add this to your CSS or inside <style> tag -->
+ <style>
+    footer {
+        background-color: #171e27;
+        color: white;
+        padding: 30px 0;
+        text-align: center;
+    }
+    footer h5 {
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+    }
+    footer p {
+        margin-bottom: 10px;
+        font-size: 0.9rem;
+    }
+    footer i {
+        margin-right: 8px;
+    }
+ </style>
+ 
+ <!-- Font Awesome for icons (optional) -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</html>

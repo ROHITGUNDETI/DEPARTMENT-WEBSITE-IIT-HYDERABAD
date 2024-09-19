@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>Field Trips</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <style>
+        /* General Styles */
+        .trip-container {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+        .trip-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .trip-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .trip-card img {
+            width: 100%;
+            height: auto;
+        }
+        .trip-card-body {
+            padding: 20px;
+        }
+        .trip-card-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        .trip-card-text {
+            font-size: 1rem;
+            color: #555;
+        }
+        .trip-card-footer {
+            padding: 10px 20px;
+            background-color: #e9ecef;
+            text-align: center;
+        }
+        .btn-view-more {
+            margin-top: 10px;
+        }
+        .btn-view-more a {
+            color: #00509e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .btn-view-more a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header_area">
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <a class="navbar-brand logo_h" href="index.html"><img src="img/CCLogo.png" style="width: 50%;" alt=""></a><span>Department of Climate Change</span>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" style="color:#0400ff" href="faculty-recruitment.html">Faculty recruitment</a></li>
+                            <li class="nav-item submenu dropdown">
+                                <a href="course-structure.html" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="what-we-are-for.html">What we are for</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="climate-change.html">Climate Change</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="administration.html">Administration</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="external-links.html">Contact Us</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="visitors-info.html">Visitors</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item submenu dropdown">
+                                <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Academics</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="course-structure.html">Course Structure</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="course.html">Course Details</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="internship.html">Internship</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="field-trips.html">Field Trips</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="Industry_Seminar.html">Industry Seminar</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item submenu dropdown">
+                                <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">People</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="faculty.html">Faculty</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="students.html">Students</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="previous_faculty">Previously Associated Faculty</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact_us.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Field Trips Section -->
+    <section class="trip-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="text-center">Field Trips</h2>
+                    <div class="row">
+                        <!-- Trip 1 -->
+                        <div class="col-md-6 col-lg-4">
+                            <div class="trip-card">
+                                <img src="img/field-trips/trip1.jpg" alt="Trip 1">
+                                <div class="trip-card-body">
+                                    <h3 class="trip-card-title">TRIP 1</h3>
+                                    <p class="trip-card-text">Indian Meteorological Department (IMD) Hyderabad, March 03 2020</p>
+                                </div>
+                                <div class="trip-card-footer">
+                                    <button class="btn-view-more"><a href="IMD-Hyderabad.html">View More</a></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Trip 2 -->
+                
+                        <!-- Add more trips as needed -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+	<footer class="footer-basic-centered">
+		<p class="footer-links">
+			<a href="what-we-are-for.html">What We Are For</a>
+			·
+			<a href="climate-change.html">Climate Change</a>
+			·
+			<a href="administration.html">Administration</a>
+			·
+			<a href="visitors-info.html">Visitors</a>
+		</p>
+	</footer>
+
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/stellar.js"></script>
+	<script src="js/countdown.js"></script>
+	<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+	<script src="js/owl-carousel-thumb.min.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="vendors/counter-up/jquery.counterup.js"></script>
+	<script src="js/mail-script.js"></script>
+	<!--gmaps Js-->
+	<script src="js/gmaps.min.js"></script>
+	<script src="js/theme.js"></script>
+</body>
+ <!-- Footer Section -->
+ <footer style="background-color: #171e27; padding: 20px; color: white;">
+	<div class="container">
+		<div class="row">
+			<!-- Logo and Department Info -->
+			<div class="col-md-6">
+				<img src="img\CCLogo.png" alt="IIT Hyderabad Logo" style="height: 60px; margin-bottom: 10px;">
+                <h5 style="color: white">DEPARTMENT OF CLIMATE CHANGE,</h5>
+                <h5 style="color: white">INDIAN INSTITUTE OF TECHNOLOGY HYDERABAD</h5>
+                <p>
+                    <i class="fas fa-envelope"></i> head [at] cc.iith.ac.in <br>
+                    <i class="fas fa-phone"></i>
+				</p>
+			</div>
+			<!-- Location Info -->
+			<div class="col-md-6">
+				<h5>LOCATION</h5>
+				<p>
+					<i class="fas fa-map-marker-alt"></i> Academic Block B, IITH, Kandi, Sangareddy - 502285
+				</p>
+			</div>
+		</div>
+		<hr style="border-top: 1px solid rgba(255,255,255,.2);">
+		<div class="row">
+			<div class="col text-center">
+				<p>© 2024 Copyright: Webteam, Department of Climate Change, IIT Hyderabad</p>
+			</div>
+		</div>
+	</div>
+ </footer>
+ 
+ <!-- Add this to your CSS or inside <style> tag -->
+ <style>
+	footer {
+		background-color: #171e27;
+		color: white;
+		padding: 30px 0;
+		text-align: center;
+	}
+	footer h5 {
+		margin-bottom: 15px;
+		font-size: 1.1rem;
+	}
+	footer p {
+		margin-bottom: 10px;
+		font-size: 0.9rem;
+	}
+	footer i {
+		margin-right: 8px;
+	}
+ </style>
+ 
+ <!-- Font Awesome for icons (optional) -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</html>
